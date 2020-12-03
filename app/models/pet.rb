@@ -3,7 +3,7 @@ class Pet < ApplicationRecord
   belongs_to :client
 
   def history_count
-    self.pet_histories.count
+    pet_histories.count
   end
 
   def avg_weight
