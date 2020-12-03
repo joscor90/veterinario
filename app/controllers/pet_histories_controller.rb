@@ -15,10 +15,12 @@ class PetHistoriesController < ApplicationController
   # GET /pet_histories/new
   def new
     @pet_history = PetHistory.new
+    @pets = Pet.all
   end
 
   # GET /pet_histories/1/edit
   def edit
+    @pets = Pet.all
   end
 
   # POST /pet_histories
