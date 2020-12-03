@@ -15,25 +15,12 @@
   <%= @client.email %>
 </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Peso promedio</th>
-      <th>Altura promedio</th>
-      <th>Peso Máximo</th>
-      <th>Altura Máxima</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%= @pet.avg_weight %></td>
-      <td><%= @pet.avg_height %></td>
-      <td><%= @pet.max_weight %></td>
-      <td><%= @pet.max_height%></td>
-    </tr>
-  </tbody>
-</table>
+<% @pets.each do |p| %>
+  <p>Average Weigth</p>
+  <%= p.avg_weight %>
+  <p>Average Heigth</p>
+  <%= p.avg_height %>
+<% end %><br>
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
