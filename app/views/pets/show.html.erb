@@ -16,6 +16,16 @@
 </p>
 
 
+<p>
+  <strong>History</strong>
+  <% @pet.pet_histories.each do |h| %>
+    <p><i>Weight</i></p>
+      <%= h.weight %>
+    <p><i>Heigthhhh</i></p>
+      <%= h.heigth %>
+  <% end %>
+</p>
+
 <table>
   <thead>
     <tr>
